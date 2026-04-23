@@ -2,6 +2,10 @@ import * as vscode from 'vscode';
 
 export async function abrirSelectorOficial() {
 
+    vscode.window.showInformationMessage(
+        'ESC para cerrar si ya estás en el perfil correcto'
+    );
+
     await vscode.commands.executeCommand(
         'workbench.profiles.actions.switchProfile'
     );
