@@ -11,9 +11,8 @@ import {
 
 export async function abrirProfilePickerUI() {
 
-    const quickPick =
-        vscode.window.createQuickPick<AccionPerfil>();
-
+const quickPick =
+    vscode.window.createQuickPick<vscode.QuickPickItem>();
     // Header moderno
     quickPick.title =
         'Profile Picker';

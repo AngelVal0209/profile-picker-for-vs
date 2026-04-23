@@ -4,31 +4,22 @@ import {
     mostrarSelectorPerfiles
 } from './commands/mostrarSelector';
 
-export async function activate(
-    context: vscode.ExtensionContext
-) {
+export function activate(context: vscode.ExtensionContext) {
 
-    console.log(
-        'Startup Profile Picker iniciado'
+    console.log('Startup Profile Picker iniciado');
+
+    const cmd = vscode.commands.registerCommand(
+        'profile-picker.abrirSelector',
+        mostrarSelectorPerfiles
     );
 
-    setTimeout(async () => {
+    context.subscriptions.push(cmd);
 
-        await mostrarSelectorPerfiles();
-
-    }, 1200);
-
-    const comando =
-        vscode.commands.registerCommand(
-            'profile-picker.abrirSelector',
-
-            async () => {
-
-                await mostrarSelectorPerfiles();
-            }
-        );
-
-    context.subscriptions.push(comando);
+    setTimeout(() => {
+    vscode.commands.executeCommand(
+        'profile-picker.abrirSelector'
+    );
+}, 800);
 }
 
-export function deactivate() {}
+export function deactivate() { }

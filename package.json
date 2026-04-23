@@ -6,19 +6,18 @@
   "engines": {
     "vscode": "^1.116.0"
   },
+  "main": "./out/extension.js",
   "categories": [
     "Other"
   ],
   "activationEvents": [
-  "onStartupFinished",
-  "onCommand:profile-picker.abrirSelector"
-],
-  "main": "./out/extension.js",
+    "onStartupFinished"
+  ],
   "contributes": {
     "commands": [
       {
         "command": "profile-picker.abrirSelector",
-        "title": "Profile Picker: Abrir Selector"
+        "title": "Abrir Profile Picker"
       }
     ]
   },
