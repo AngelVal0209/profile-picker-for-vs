@@ -16,7 +16,7 @@ export async function abrirProfilePickerUI() {
 
     // Header moderno
     quickPick.title =
-        '$(account) Startup Profile Picker';
+        'Profile Picker';
 
     quickPick.placeholder =
         'Gestiona tus perfiles rápidamente';

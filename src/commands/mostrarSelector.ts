@@ -6,71 +6,7 @@ import {
 
 export async function mostrarSelectorPerfiles() {
 
-    await abrirProfilePickerUI();
+    await abrirProfilePickerUI(); 
 }
 
-/* export async function mostrarSelectorPerfiles() {
-
-    const quickPick =
-        vscode.window.createQuickPick<AccionPerfil>();
-
-    quickPick.title =
-        'Startup Profile Picker';
-
-    quickPick.placeholder =
-        'Selecciona una acción de perfiles';
-
-    quickPick.items = [
-
-        {
-            label: '$(sync) Cambiar perfil',
-            description: 'Abrir selector oficial de perfiles'
-        },
-
-        {
-            label: '$(add) Crear nuevo perfil',
-            description: 'Crear un nuevo perfil'
-        },
-
-        {
-            label: '$(close) Continuar',
-            description: 'Cerrar selector'
-        }
-    ];
-
-    quickPick.onDidAccept(async () => {
-
-        const seleccion =
-            quickPick.selectedItems[0];
-
-        if (!seleccion) {
-            return;
-        }
-
-        // Cambiar perfil
-        if (seleccion.label.includes('Cambiar')) {
-
-            quickPick.hide();
-
-            await abrirSelectorOficial();
-
-            return;
-        }
-
-        // Crear perfil
-        if (seleccion.label.includes('Crear')) {
-
-            quickPick.hide();
-
-            await crearNuevoPerfil();
-
-            return;
-        }
-
-        // Continuar
-        quickPick.hide();
-    });
-
-    quickPick.show();
-} */
 

@@ -12,14 +12,12 @@ export async function activate(
         'Startup Profile Picker iniciado'
     );
 
-    // Esperar carga completa
     setTimeout(async () => {
 
         await mostrarSelectorPerfiles();
 
     }, 1200);
 
-    // Comando manual
     const comando =
         vscode.commands.registerCommand(
             'profile-picker.abrirSelector',
