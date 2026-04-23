@@ -1,18 +1,25 @@
 import * as vscode from 'vscode';
-import {
-    obtenerPerfiles,
-    PerfilItem
-} from '../services/perfilesService';
 
 export async function mostrarSelectorPerfiles() {
 
-    const perfiles = await obtenerPerfiles();
+    const opciones: vscode.QuickPickItem[] = [
+
+        {
+            label: '$(person) Cambiar perfil',
+            description: 'Abrir selector oficial de perfiles'
+        },
+
+        {
+            label: '$(add) Crear nuevo perfil',
+            description: 'Crear un perfil nuevo'
+        }
+    ];
 
     const seleccion = await vscode.window.showQuickPick(
-        perfiles,
+        opciones,
         {
             title: 'Profile Picker',
-            placeHolder: 'Selecciona un perfil'
+            placeHolder: 'Selecciona una opción'
         }
     );
 
@@ -20,8 +27,8 @@ export async function mostrarSelectorPerfiles() {
         return;
     }
 
-    // Crear nuevo perfil
-    if (seleccion.nuevo) {
+    // Crear perfil
+    if (seleccion.label.includes('Crear')) {
 
         await vscode.commands.executeCommand(
             'workbench.profiles.actions.createProfile'
@@ -30,16 +37,8 @@ export async function mostrarSelectorPerfiles() {
         return;
     }
 
-    // Cambiar perfil
-    if (seleccion.profile) {
-
-        await vscode.window.showInformationMessage(
-            `Perfil seleccionado: ${seleccion.profile.name}`
-        );
-
-        // Abrir selector oficial de cambio
-        await vscode.commands.executeCommand(
-            'workbench.profiles.actions.switchProfile'
-        );
-    }
+    // Selector oficial
+    await vscode.commands.executeCommand(
+        'workbench.profiles.actions.switchProfile'
+    );
 }
