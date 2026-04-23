@@ -1,11 +1,18 @@
 import * as vscode from 'vscode';
-import { mostrarSelectorPerfiles } from './commands/mostrarSelector';
 
-export async function activate(context: vscode.ExtensionContext) {
+import {
+    mostrarSelectorPerfiles
+} from './commands/mostrarSelector';
 
-    console.log('Profile Picker iniciado');
+export async function activate(
+    context: vscode.ExtensionContext
+) {
 
-    // Mostrar automáticamente al iniciar
+    console.log(
+        'Startup Profile Picker iniciado'
+    );
+
+    // Esperar carga completa
     setTimeout(async () => {
 
         await mostrarSelectorPerfiles();
@@ -13,13 +20,15 @@ export async function activate(context: vscode.ExtensionContext) {
     }, 1200);
 
     // Comando manual
-    const comando = vscode.commands.registerCommand(
-        'profile-picker.abrirSelector',
-        async () => {
+    const comando =
+        vscode.commands.registerCommand(
+            'profile-picker.abrirSelector',
 
-            await mostrarSelectorPerfiles();
-        }
-    );
+            async () => {
+
+                await mostrarSelectorPerfiles();
+            }
+        );
 
     context.subscriptions.push(comando);
 }

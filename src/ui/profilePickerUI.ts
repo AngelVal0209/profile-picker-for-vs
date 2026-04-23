@@ -1,26 +1,35 @@
 import * as vscode from 'vscode';
 
 import {
-    abrirProfilePickerUI
-} from '../ui/profilePickerUI';
+    abrirSelectorOficial,
+    crearNuevoPerfil
+} from '../services/profileService';
 
-export async function mostrarSelectorPerfiles() {
+import {
+    AccionPerfil
+} from '../types/profile';
 
-    await abrirProfilePickerUI();
-}
-
-/* export async function mostrarSelectorPerfiles() {
+export async function abrirProfilePickerUI() {
 
     const quickPick =
         vscode.window.createQuickPick<AccionPerfil>();
 
+    // Header moderno
     quickPick.title =
-        'Startup Profile Picker';
+        '$(account) Startup Profile Picker';
 
     quickPick.placeholder =
-        'Selecciona una acción de perfiles';
+        'Gestiona tus perfiles rápidamente';
+
+    // Estilo visual más limpio
+    quickPick.matchOnDescription = true;
 
     quickPick.items = [
+
+        {
+            kind: vscode.QuickPickItemKind.Separator,
+            label: 'PERFILES'
+        },
 
         {
             label: '$(sync) Cambiar perfil',
@@ -29,11 +38,16 @@ export async function mostrarSelectorPerfiles() {
 
         {
             label: '$(add) Crear nuevo perfil',
-            description: 'Crear un nuevo perfil'
+            description: 'Crear un entorno nuevo'
         },
 
         {
-            label: '$(close) Continuar',
+            kind: vscode.QuickPickItemKind.Separator,
+            label: 'GENERAL'
+        },
+
+        {
+            label: '$(arrow-right) Continuar',
             description: 'Cerrar selector'
         }
     ];
@@ -48,7 +62,11 @@ export async function mostrarSelectorPerfiles() {
         }
 
         // Cambiar perfil
-        if (seleccion.label.includes('Cambiar')) {
+        if (
+            seleccion.label.includes(
+                'Cambiar'
+            )
+        ) {
 
             quickPick.hide();
 
@@ -58,7 +76,11 @@ export async function mostrarSelectorPerfiles() {
         }
 
         // Crear perfil
-        if (seleccion.label.includes('Crear')) {
+        if (
+            seleccion.label.includes(
+                'Crear'
+            )
+        ) {
 
             quickPick.hide();
 
@@ -72,5 +94,4 @@ export async function mostrarSelectorPerfiles() {
     });
 
     quickPick.show();
-} */
-
+}
