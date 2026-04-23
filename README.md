@@ -1,150 +1,193 @@
-# 🚀 Startup Profile Picker
+#  Profile Picker
 
-> Selector de perfiles nativo para Visual Studio Code enfocado en velocidad, productividad y flujo de trabajo.
+> Selector de perfiles nativo para Visual Studio Code: rápido, minimalista y enfocado en productividad.
 
----
-
-<p align="center">
-
-Cambio rápido de perfiles • UX nativa • Minimalista • Mejor productividad
-
-</p>
+[![Version](https://img.shields.io/badge/version-0.0.1-blue.svg)](https://marketplace.visualstudio.com/items?itemName=profile-picker)
+[![VS Code](https://img.shields.io/badge/VS%20Code-%5E1.116.0-blue.svg)](https://code.visualstudio.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ---
 
-# ✨ ¿Qué es Startup Profile Picker?
+## ✨ ¿Qué es Profile Picker?
 
-Startup Profile Picker es una extensión ligera para Visual Studio Code que permite acceder y gestionar perfiles de manera rápida directamente al iniciar el editor.
+Profile Picker es una extensión ligera para Visual Studio Code que automatiza la selección de perfiles al iniciar el editor. Diseñada para desarrolladores que trabajan con múltiples entornos, ofrece una interfaz nativa y rápida para gestionar perfiles sin interrumpir el flujo de trabajo.
 
-En lugar de navegar manualmente por configuraciones y menús, la extensión ofrece una experiencia limpia utilizando componentes nativos de VS Code.
+### 🎯 Problema que resuelve
 
-Diseñado para desarrolladores que necesitan cambiar frecuentemente entre distintos entornos de trabajo sin interrumpir su flujo de productividad.
-
----
-
-# 🖥 Experiencia Nativa de VS Code
-
-Startup Profile Picker fue diseñado para sentirse como una función integrada de VS Code.
-
-✅ Quick Pick nativo  
-✅ Compatible con cualquier tema  
-✅ Sin Webviews  
-✅ Sin interfaces HTML pesadas  
-✅ Ligero y rápido  
+Los perfiles de VS Code permiten configurar entornos personalizados (extensiones, configuraciones, atajos), pero cambiar entre ellos requiere navegar por menús. Profile Picker elimina esta fricción mostrando un selector automático al iniciar VS Code.
 
 ---
 
-# ⚡ Características
+## ⚡ Características principales
 
-## 🚀 Selector automático al iniciar
-Muestra automáticamente el selector de perfiles al abrir VS Code.
-
----
-
-## 🔄 Cambio rápido de perfiles
-Accede rápidamente al selector oficial de perfiles de VS Code.
-
----
-
-## ➕ Crear perfiles fácilmente
-Permite crear nuevos perfiles directamente desde el menú principal.
+- **🚀 Selector automático**: Aparece automáticamente al abrir VS Code (después de 800ms)
+- **🔄 Cambio rápido**: Acceso directo al selector oficial de perfiles de VS Code
+- **➕ Creación sencilla**: Crear nuevos perfiles desde la interfaz
+- **🖥 Nativo**: Utiliza QuickPick nativo de VS Code, compatible con todos los temas
+- **🪶 Ligero**: Sin webviews ni interfaces pesadas, consumo mínimo de recursos
+- **⚡ Rápido**: Ejecución instantánea, sin delays perceptibles
 
 ---
 
-## 🎯 Enfocado en productividad
-Optimizado para desarrolladores que trabajan en múltiples contextos.
-
----
-
-## 🪶 Ligero y minimalista
-Consumo mínimo de recursos y ejecución rápida.
-
----
-
-# 📸 Experiencia
+## 📸 Interfaz de usuario
 
 ```text
 ┌──────────────────────────────────┐
-│ Startup Profile Picker           │
+│ Profile Picker                   │
 ├──────────────────────────────────┤
-│ 👤 Cambiar perfil                │
-│ ➕ Crear nuevo perfil            │
+│ $(sync) Cambiar perfil           │
+│ $(add) Crear nuevo perfil        │
+│ $(arrow-right) Continuar         │
 └──────────────────────────────────┘
 ```
 
-Luego VS Code abrirá automáticamente el selector oficial de perfiles.
-
 ---
 
-# 🧠 ¿Por qué usar Startup Profile Picker?
+## 🛠 Instalación
 
-Los perfiles de VS Code son extremadamente útiles, pero cambiar entre ellos manualmente puede romper el flujo de trabajo.
-
-Startup Profile Picker simplifica ese proceso ofreciendo acceso inmediato a la administración de perfiles apenas inicia el editor.
-
-El objetivo es reducir fricción y mejorar la experiencia de desarrollo.
-
----
-
-# 🛠 Instalación
+### Desde VS Code Marketplace
 
 1. Abre Visual Studio Code
-2. Ve a la pestaña de extensiones
-3. Busca:
-
-```text
-Startup Profile Picker
-```
-
-4. Instala la extensión
+2. Presiona `Ctrl+Shift+X` para abrir Extensiones
+3. Busca: `Profile Picker`
+4. Haz clic en **Instalar**
 5. Reinicia VS Code
 
----
+### Desde código fuente
 
-# 🎮 Uso
-
-Al iniciar VS Code aparecerá automáticamente el selector de perfiles.
-
-También puedes abrirlo manualmente desde:
-
-```text
-Ctrl + Shift + P
-```
-
-y ejecutar:
-
-```text
-Profile Picker: Abrir Selector
+```bash
+git clone https://github.com/tu-usuario/profile-picker.git
+cd profile-picker
+npm install
+npm run compile
+code --install-extension profile-picker-0.0.1.vsix
 ```
 
 ---
 
-# ⚙ Tecnologías
+## 🎮 Uso
 
-- TypeScript
-- VS Code Extension API
-- Native QuickPick API
+### Automático
+Al iniciar VS Code, el selector aparece automáticamente después de cargar la interfaz.
 
----
+### Manual
+- Presiona `Ctrl+Shift+P`
+- Ejecuta: `Profile Picker: Abrir Selector`
 
-# 🪄 Filosofía
+### Opciones disponibles
 
-Startup Profile Picker evita interfaces pesadas y se integra completamente con la experiencia nativa de Visual Studio Code.
-
-Sin distracciones.  
-Sin paneles innecesarios.  
-Solo productividad.
-
----
-
-# 📌 Estado del Proyecto
-
-✅ En desarrollo activo  
-✅ UX nativa  
-✅ Compatible con perfiles de VS Code  
+- **Cambiar perfil**: Abre el selector oficial de perfiles de VS Code
+- **Crear nuevo perfil**: Inicia el asistente de creación de perfiles
+- **Continuar**: Cierra el selector y continúa con VS Code normal
 
 ---
 
-# 📄 Licencia
+## 🏗 Arquitectura técnica
 
-MIT License
+```
+src/
+├── extension.ts          # Punto de entrada, activación automática
+├── commands/
+│   └── mostrarSelector.ts # Comando principal
+├── services/
+│   └── profileService.ts  # Lógica de perfiles (cambio, creación)
+├── types/
+│   └── profile.ts         # Tipos TypeScript
+├── ui/
+│   └── profilePickerUI.ts # Interfaz QuickPick
+└── utils/
+    └── profileUtils.ts    # Utilidades auxiliares
+```
+
+### Tecnologías
+
+- **TypeScript**: Lenguaje principal
+- **VS Code Extension API**: API nativa para integraciones
+- **ESLint**: Linting y calidad de código
+- **Mocha**: Framework de testing
+
+---
+
+## ⚙ Configuración
+
+La extensión no requiere configuración adicional. Se activa automáticamente con el evento `onStartupFinished`.
+
+### Comandos disponibles
+
+| Comando | Descripción |
+|---------|-------------|
+| `profile-picker.abrirSelector` | Abre el selector de perfiles |
+
+---
+
+## 🧪 Desarrollo
+
+### Prerrequisitos
+
+- Node.js 16+
+- VS Code 1.116.0+
+
+### Scripts disponibles
+
+```bash
+npm run compile    # Compilar TypeScript
+npm run watch      # Compilación en modo watch
+npm run lint       # Ejecutar ESLint
+npm run test       # Ejecutar tests
+```
+
+### Estructura de desarrollo
+
+1. Clona el repositorio
+2. Instala dependencias: `npm install`
+3. Compila: `npm run compile`
+4. Presiona `F5` para abrir en modo debug
+
+---
+
+## 📈 Estado del proyecto
+
+- ✅ **Versión actual**: 0.0.1 (Inicial)
+- ✅ **Compatibilidad**: VS Code ^1.116.0
+- ✅ **Arquitectura**: Completa y funcional
+- 🚧 **Próximas mejoras**: Soporte para perfiles personalizados, atajos de teclado
+
+---
+
+## 🤝 Contribuir
+
+¡Las contribuciones son bienvenidas! Para contribuir:
+
+1. Fork el proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/nueva-funcionalidad`)
+3. Commit tus cambios (`git commit -am 'Agrega nueva funcionalidad'`)
+4. Push a la rama (`git push origin feature/nueva-funcionalidad`)
+5. Abre un Pull Request
+
+### Guías de contribución
+
+- Sigue el estilo de código existente
+- Agrega tests para nuevas funcionalidades
+- Actualiza la documentación según sea necesario
+
+---
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para más detalles.
+
+---
+
+## 🙏 Agradecimientos
+
+- Inspirado en la necesidad de flujos de trabajo eficientes en desarrollo
+- Gracias a la comunidad de VS Code por la excelente API de extensiones
+
+---
+
+## 📞 Soporte
+
+Si encuentras problemas o tienes sugerencias:
+
+- Abre un [issue](https://github.com/tu-usuario/profile-picker/issues) en GitHub
+- Revisa el [CHANGELOG](CHANGELOG.md) para cambios recientes
