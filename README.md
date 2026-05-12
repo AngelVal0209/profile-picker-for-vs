@@ -189,5 +189,5 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para
 
 Si encuentras problemas o tienes sugerencias:
 
-- Abre un [issue](https://github.com/tu-usuario/profile-picker/issues) en GitHub
+- Abre un [issue](https://github.com/AngelVal0209/profile-picker-for-vs/issues) en GitHub
 - Revisa el [CHANGELOG](CHANGELOG.md) para cambios recientes
